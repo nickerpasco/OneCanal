@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="StepViewHorizontal">
+        <attr name="number_of_steps" format="integer" />
+
+        <attr name="set_step_at" format="integer" />
+    </declare-styleable>
+
+</resources>

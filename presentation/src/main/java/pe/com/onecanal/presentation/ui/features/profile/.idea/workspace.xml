@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6eaf18cf-4ba9-431f-bccf-0c16ee4a61f2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data2/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data2/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/mapper/ResponseMapperImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/mapper/ResponseMapperImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/network/endpoints/RemoteDataSourceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/network/endpoints/RemoteDataSourceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/network/response/MeResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/network/response/MeResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/repository/AppRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/repository/AppRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/util/NetworkUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../data/src/main/java/pe/com/onecanal/data/util/NetworkUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/Account.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/AccountValidation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/Failure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/Failure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/UserProfileData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/entity/UserProfileData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/repository/AppRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/repository/AppRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/usecases/GetSalaryAdvanceReasons.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../domain/src/main/java/pe/com/onecanal/domain/usecases/GetSalaryAdvanceReasonsUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../androidTest/java/pe/com/onecanal/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../androidTest/java/pe/com/onecanal/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../framework/hilt/HiltApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../framework/hilt/HiltApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../framework/hilt/modules/ApplicationModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../framework/hilt/modules/ApplicationModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../framework/hilt/modules/RepositoryModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../framework/hilt/modules/RepositoryModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../framework/hilt/modules/UserCasesModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../framework/hilt/modules/UserCasesModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../base/BaseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../base/BaseActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../base/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../base/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../base/BaseViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../base/BaseViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../config/Constants.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../config/MyDataStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dialogs/LoadingDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../dialogs/LoadingDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dialogs/MessageDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../dialogs/MessageDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../accountActivation/AccountActivationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../accountActivation/AccountActivationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../changePassword/ChangePasswordFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../changePassword/ChangePasswordFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forgotPassowrd/ForgotPasswordActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../forgotPassowrd/ForgotPasswordActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../forgotPassowrd/ForgotPasswordViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../forgotPassowrd/ForgotPasswordViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../history/HistoryFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../history/HistoryFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../login/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../login/LoginViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/intent/LoginIntent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../login/intent/LoginIntent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/intent/LoginIntentConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../login/intent/LoginIntentConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login/state/LoginIntentState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../login/state/LoginIntentState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainDrawer/MainDrawerActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../mainDrawer/MainDrawerActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mainDrawer/MainDrawerViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../mainDrawer/MainDrawerViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newPassword/NewPasswordActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../newPassword/NewPasswordActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../newPassword/NewPasswordViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../newPassword/NewPasswordViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankCardsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/BankCardsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ProfileFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceMainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceMainFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceStepTwoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceStepTwoFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceSuccesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceSuccesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/SalaryAdvanceViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/stepOne/SalaryAdvanceFragmentStepOneFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/stepOne/SalaryAdvanceFragmentStepOneFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/stepOne/SalaryAdvanceStepOneViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/stepOne/SalaryAdvanceStepOneViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/stepOne/intent/SalaryAdvanceStepOneIntent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/stepOne/intent/SalaryAdvanceStepOneIntent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/stepOne/intent/SalaryAdvanceStepOneIntentConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/stepOne/intent/SalaryAdvanceStepOneIntentConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../salaryAdvance/stepOne/state/SalaryAdvanceStepOneIntentState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../salaryAdvance/stepOne/state/SalaryAdvanceStepOneIntentState.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../splash/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../splash/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../validateAccount/AccountValidationActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../validateAccount/AccountValidationActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../validateAccount/AccountValidationViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../validateAccount/AccountValidationViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../util/ConnectionUtils.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../util/ConnectionUtilsImpl.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/background_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/background_btn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_btn_approved.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_btn_approved.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_stepview_filled_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_stepview_filled_circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_stepview_outlined_circle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/bg_stepview_outlined_circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/dropdonw_background_btn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/dropdonw_background_btn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/drawable/splash_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/drawable/splash_image.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/layout/fragment_salary_advance_step_one.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/layout/fragment_salary_advance_step_one.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../test/java/pe/com/onecanal/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../test/java/pe/com/onecanal/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../../../../settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../../../../settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../../../../../.." />
+  </component>
+  <component name="ProjectId" id="23y9u2TOKIOcHeRkMq6l4ahBqHt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6eaf18cf-4ba9-431f-bccf-0c16ee4a61f2" name="Default Changelist" comment="" />
+      <created>1642695679030</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642695679030</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

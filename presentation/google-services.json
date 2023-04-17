@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "783203990111",
+    "project_id": "one-canal",
+    "storage_bucket": "one-canal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783203990111:android:7aa7c16476e186773039ea",
+        "android_client_info": {
+          "package_name": "pe.com.onecanal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783203990111-ca86bi61e95qda680g5upfj5rc8u7mb4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.com.onecanal",
+            "certificate_hash": "fe3f32635b38b9e7f7ede2294175cc8bc26779a7"
+          }
+        },
+        {
+          "client_id": "783203990111-s9snbbe2rl51tltrqorr732d353n69vl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1AcxNIXqtr6F2CFuJasDueRz7b5UQapk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783203990111-s9snbbe2rl51tltrqorr732d353n69vl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "783203990111-44nran5ao4pva1foqhp4u4km3asiafbm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.myapp.One-Canal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

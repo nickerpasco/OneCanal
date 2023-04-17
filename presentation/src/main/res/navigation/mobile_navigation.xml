@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_step_one"
+    >
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="pe.com.onecanal.presentation.ui.features.profile.view.ProfileFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_profile" >
+
+        <action
+            android:id="@+id/action_nav_home_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_bankFragment"
+            app:destination="@id/bankFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_step_one"
+            app:destination="@id/nav_step_one" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="pe.com.onecanal.presentation.ui.features.history.view.HistoryFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="pe.com.onecanal.presentation.ui.features.changePassword.view.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankFragment"
+        android:name="pe.com.onecanal.presentation.ui.features.bank.view.BankFragment"
+        android:label="fragment_bank"
+        tools:layout="@layout/fragment_bank" >
+        <action
+            android:id="@+id/action_bankFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="pe.com.onecanal.presentation.ui.features.edit.view.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_step_one"
+        android:name="pe.com.onecanal.presentation.ui.features.salaryAdvance.stepOne.view.SalaryAdvanceStepOneFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_salary_advance_step_one">
+        <action
+            android:id="@+id/action_step_one_to_step_two"
+            app:destination="@id/nav_step_two"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_step_one_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_step_two"
+        android:name="pe.com.onecanal.presentation.ui.features.salaryAdvance.stepTwo.view.SalaryAdvanceStepTwoFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_salary_advance_step_two">
+        <action
+            android:id="@+id/action_nav_step_two_to_nav_step_three"
+            app:destination="@id/nav_step_three"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_step_two_to_nav_step_one"
+            app:destination="@id/nav_step_one" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_step_three"
+        android:name="pe.com.onecanal.presentation.ui.features.salaryAdvance.stepThree.view.SalaryAdvanceStepThreeFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_salary_advance_step_three">
+        <action
+            android:id="@+id/action_nav_step_three_to_salaryAdvanceSuccesFragment"
+            app:destination="@id/salaryAdvanceSuccesFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_nav_step_three_to_nav_step_one"
+            app:destination="@id/nav_step_one" />
+    </fragment>
+    <fragment
+        android:id="@+id/salaryAdvanceSuccesFragment"
+        android:name="pe.com.onecanal.presentation.ui.features.salaryAdvance.success.view.SalaryAdvanceSuccessFragment"
+        android:label="fragment_salary_advance_succes"
+        tools:layout="@layout/fragment_salary_advance_succes">
+        <action
+            android:id="@+id/action_salaryAdvanceSuccesFragment_to_nav_step_one"
+            app:destination="@id/nav_step_one"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,150 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs'
+    id 'com.google.gms.google-services'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    flavorDimensions "default"
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "pe.com.onecanal"
+        minSdk 21
+        targetSdk 32
+        versionCode 8
+        versionName "1.2.4"
+
+        testInstrumentationRunner "androidx.test.runner.And roidJUnitRunner"
+    }
+    viewBinding {
+        enabled = true
+    }
+    dataBinding {
+        enabled = true
+    }
+    signingConfigs {
+        debug {
+            storeFile file('key/key_onecanal.jks')
+            storePassword '$PeruApp$'
+            keyAlias 'key0'
+            keyPassword '$PeruApp$'
+        }
+        release {
+            storeFile file('key/key_onecana01l.jks')
+            storePassword '$PeruApp$'
+            keyAlias 'key0'
+            keyPassword '$PeruApp$'
+        }
+    }
+    productFlavors {
+        def addConstantTo = {target, constantName, constantValue ->
+            target.manifestPlaceholders += [ (constantName):constantValue]
+            target.buildConfigField "String", "${constantName}", "\"${constantValue}\""
+        }
+        dev{
+            buildConfigField "String", "BASE_URL", "\"https://onecanal.pappstest.com/api/\""
+            buildConfigField "String", "DEEPLINK_BASE_URL", "\"https://onecanal.pappstest.com\""
+            addConstantTo(owner, "DEEPLINK_HOST", "onecanal.pappstest.com")
+        }
+        prod{
+            buildConfigField "String", "BASE_URL", "\"https://api.onecanalperu.com/api/\""
+            buildConfigField "String", "DEEPLINK_BASE_URL", "\"https://api.onecanalperu.com\""
+            addConstantTo(owner, "DEEPLINK_HOST", "api.onecanalperu.com")
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(':data')
+    implementation project(':domain')
+    implementation common.androidCore
+    implementation common.appCompat
+    implementation common.material
+    implementation common.constraintLyout
+    implementation common.legacySupport
+    implementation common.livedata
+    implementation common.viewmodel
+
+    //NAVIGATION COMPONENT
+    implementation navigation.navigationUi
+    implementation navigation.navigationFragment
+
+    //HILT
+    implementation daggerHilt.hilt
+    kapt daggerHilt.compiler
+    annotationProcessor daggerHilt.annotationProcessor
+//    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+
+    //RETROFIT
+
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    implementation  "com.squareup.retrofit2:converter-gson:$versions.retrofitgson"
+    implementation "com.google.code.gson:gson:$versions.gson"
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpInterceptor"
+
+
+
+    //DATA STORE
+    implementation common.datastore
+
+//<-------------------------->
+    //CRASHLYTICS
+    implementation platform('com.google.firebase:firebase-bom:29.0.3')
+
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation 'androidx.test:core:1.4.0'
+    testImplementation  'org.robolectric:robolectric:4.7.3'
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.0'
+
+    androidTestImplementation  'org.mockito:mockito-android:4.3.0'
+    testImplementation 'org.mockito:mockito-inline:4.3.0'
+
+    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation 'app.cash.turbine:turbine:0.7.0'
+
+}

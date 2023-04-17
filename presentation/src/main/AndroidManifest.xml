@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pe.com.onecanal">
+
+    <application
+        android:name=".framework.hilt.application.HiltApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OneCanal">
+        <activity
+            android:name=".presentation.ui.features.validateCode.view.CodeValidationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.features.newPassword.view.NewPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.features.validateAccount.view.AccountValidationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.features.login.view.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.features.forgotPassoword.view.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ui.features.mainDrawer.view.MainDrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_drawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.OneCanal.NoActionBar" />
+        <activity
+            android:name=".presentation.ui.features.splash.view.SplashActivity"
+            android:configChanges="uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- DEEP LINK -->
+            <!--<intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                &lt;!&ndash; doc: antes se utilizaba poniendo en duro la url pero como en dev y prod ahora son diferentes y no tener que cambiarlos a mano se modifico en el gradle antes-> onecanal.pappstest.com &ndash;&gt;
+                <data
+                    android:host="${DEEPLINK_HOST}"
+                    android:pathPrefix="/reset-password"
+                    android:scheme="https" />
+            </intent-filter>-->
+            <!-- DEEP LINK -->
+
+        </activity>
+    </application>
+
+</manifest>

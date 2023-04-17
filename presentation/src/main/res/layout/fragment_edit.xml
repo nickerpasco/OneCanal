@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="editViewModel"
+            type="pe.com.onecanal.presentation.ui.features.edit.viewModel.EditViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.ui.features.edit.view.EditFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/appbar"
+                layout="@layout/action_bar_simple"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:gravity="start"
+                android:text="@string/edit_helper"
+                android:textAppearance="@style/body2"
+                android:textColor="@color/hinter_color_2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_additional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen35"
+                    android:text="@string/money"
+                    android:textAppearance="@style/overline2"
+                    android:textColor="@color/profile_body_color"
+                    app:layout_constraintStart_toEndOf="@+id/imageView41"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ot_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textColorHint="@color/black"
+                    android:hint="@string/hint_money"
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:setError="@{editViewModel.money.errorTextResource}"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:hint="@string/hint_money"
+                        android:text="@={editViewModel.money.fieldText}"
+                        android:textAppearance="@style/body3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen12"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ot_money"
+                    app:layout_constraintTop_toBottomOf="@+id/ot_money" />
+
+                <ImageView
+                    android:id="@+id/imageView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="@dimen/dimen6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView18"
+                    app:srcCompat="@drawable/ic_money"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen35"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:textAppearance="@style/overline2"
+                    android:textColor="@color/profile_body_color"
+                    android:text="@string/company_position"
+                    app:layout_constraintStart_toEndOf="@+id/imageView36"
+                    app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ot_company_position"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/hint_work"
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    android:textColorHint="@color/black"
+                    app:setError="@{editViewModel.jobP.errorTextResource}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_company_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/hint_work"
+                        android:text="@={editViewModel.jobP.fieldText}"
+                        android:textAppearance="@style/body3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen12"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ot_company_position"
+                    app:layout_constraintTop_toBottomOf="@+id/ot_company_position" />
+
+                <ImageView
+                    android:id="@+id/imageView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen25"
+                    android:layout_marginTop="@dimen/dimen6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView19"
+                    app:srcCompat="@drawable/ic_work"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen35"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:text="@string/marital_status"
+                    android:textAppearance="@style/overline2"
+                    android:textColor="@color/profile_body_color"
+                    app:layout_constraintStart_toEndOf="@+id/imageView53"
+                    app:layout_constraintTop_toBottomOf="@+id/divider6" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ot_marital"
+                    style="@style/myDropDown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/hint_civil"
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    android:textColorHint="@color/black"
+                    app:setError="@{editViewModel.maritalType.errorTextResource}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/autocomplete_marital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_civil"
+                        android:inputType="none"
+                        android:text="@={editViewModel.maritalType.fieldText}"
+                        android:textAppearance="@style/body3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dimen12"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ot_marital"
+                    app:layout_constraintTop_toBottomOf="@+id/ot_marital" />
+
+                <ImageView
+                    android:id="@+id/imageView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen25"
+                    android:layout_marginTop="@dimen/dimen6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView27"
+                    app:srcCompat="@drawable/ic_state_civil"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen35"
+                    android:layout_marginTop="@dimen/dimen16"
+                    android:text="@string/address"
+                    android:textAppearance="@style/overline2"
+                    android:textColor="@color/profile_body_color"
+                    app:layout_constraintStart_toEndOf="@+id/imageView53"
+                    app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ot_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:hint="@string/hint_work"
+                    app:hintEnabled="false"
+                    app:hintAnimationEnabled="false"
+                    android:textColorHint="@color/black"
+                    app:setError="@{editViewModel.address.errorTextResource}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView57"
+                    app:layout_constraintTop_toBottomOf="@+id/textView57">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/hint_work"
+                        android:text="@={editViewModel.address.fieldText}"
+                        android:textAppearance="@style/body3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imageView55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen25"
+                    android:layout_marginTop="@dimen/dimen6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView57"
+                    app:srcCompat="@drawable/ic_address"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen26"
+                android:layout_marginBottom="@dimen/dimen14"
+                android:text="@string/add_edit_btn_text"
+                app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintStart_toStartOf="@+id/guideline7"
+                app:layout_constraintTop_toBottomOf="@+id/layout_additional"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/MyOutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen36"
+                android:text="@string/cancel_edit_btn_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

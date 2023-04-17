@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">OneCanal</string>
+
+    <string name="log_in">Iniciar Sesión</string>
+    <string name="document_number">Número de documento</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_your_passoword">¿Olvidaste tu contraseña?</string>
+    <string name="dont_have_account">"¿ Aún no tienes cuenta ? "</string>
+    <string name="DNI">DNI</string>
+    <string name="immigration_card">Carnet de extranjería</string>
+    <string name="passport">Pasaporte</string>
+    <string name="document_type">Tipo de documento</string>
+    <string name="understood">Entendido</string>
+    <string name="account_not_activated">Su cuenta no está activada</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="salary_advance">Adelanto de sueldo</string>
+    <string name="salary">Salario</string>
+    <string name="salary_advance_available">Salario disponible de adelanto :\nS/ %s</string>
+
+    <string name="commissions">Comisiones</string>
+    <string name="continue_">Continuar</string>
+    <string name="select_advance_reason">Seleccionar motivo del adelanto</string>
+    <string name="deposito_waring">Se realizará el depósito a la cuenta seleccionada.</string>
+    <string name="cancel">Cancelar</string>
+    <string name="select_destination_account">Seleccionar cuenta de depósito</string>
+    <string name="amount_to_transfer">Monto a recibir</string>
+    <string name="amount_to_transfer_">Monto a recibir %s</string>
+    <string name="credit_account">Cuenta de abono</string>
+    <string name="payment_period">Periodo de pago</string>
+    <string name="motive_for_advance">Motivo del adelanto</string>
+    <string name="back_to_home">Volver a la página inicial</string>
+
+    <string name="destination_account">Cuenta de abono - %s</string>
+    <string name="advance_amount">Monto de adelanto S/ %s</string>
+    <string name="total_comissions">Comisiones totales %s</string>
+    <string name="amount">S/ %s</string>
+    <string name="advance_reason">Razón de adelanto: %s</string>
+    <string name="advance_reason_">Razón de adelanto</string>
+    <string name="AdvanceRequestSuccesfullySend">“Se ha enviado la solicitud del adelanto de sueldo el %s”</string>
+    <string name="validate_account">Validar cuenta</string>
+    <string name="validate_account_helper">Si aún no tienes una cuenta, ingresa tus datos y solicita validar cuenta.</string>
+    <string name="accept_terms_and_conditions">Acepto los términos y condiciones</string>
+    <string name="accept_money">Acepto la solicitud de adelanto</string>
+    <string name="title_accept_money">Solicitud de adelanto</string>
+    <string name="title_activity_main_drawer">MainDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profile">"Perfil "</string>
+    <string name="menu_salary_advance">Adelanto de sueldo</string>
+    <string name="menu_history">Historial</string>
+    <string name="current_password">Contraseña actual</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="repeat_new_password">Confirmación de nueva contraseña</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="password_helper">Ingrese su nueva contraseña debe contener 6 caracteres alfanuméricos.</string>
+    <string name="code_helper">Ingrese el código de verificación de 4 dígitos que hemos enviado a su correo.</string>
+    <string name="solicited">Solicitado</string>
+    <string name="accept">Aceptar</string>
+    <string name="salary_advance_detail">Detalle de adelanto de sueldo</string>
+    <string name="acount_for_payment">Cuenta de abono</string>
+    <string name="approved">Aprobado</string>
+    <string name="title_activity_account_activation">AccountActivationActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>puesto de la empresa
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="save">Guardar</string>
+    <string name="forgot_my_password">Olvidé mi contraseña</string>
+    <string name="send">Enviar</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="igv">IGV:S/ %s</string>
+    <string name="itf">ITF: S/ %s</string>
+    <string name="history">Historial</string>
+    <string name="fee">FEE: S/ %s</string>
+
+
+    <string name="edit_info">Editar información</string>
+    <string name="money">Sueldo</string>
+    <string name="company_position">Puesto en la empresa</string>
+    <string name="marital_status">Estado civil</string>
+    <string name="address">Dirección</string>
+
+
+    <string name="add_bank">Agregar cuenta bancaria</string>
+    <string name="bank_helper">Ingrese sus datos. Esta sección es obligatoria.</string>
+    <string name="bank">Banco</string>
+    <string name="number_account">Nro. cuenta</string>
+    <string name="cci">CCI.</string>
+
+    <string name="add_bank_btn_text">Agregar</string>
+    <string name="cancel_bank_btn_text">Cancelar</string>
+
+
+    <string name="edit_profile">Editar información</string>
+    <string name="edit_helper">(*) Se requiere completar.</string>
+
+    <string name="hint_money">Editar información</string>
+    <string name="hint_work">Escriba aquí</string>
+    <string name="hint_civil">Selecciona una opción</string>
+    <string name="hint_address">Escriba aquí</string>
+
+
+    <string name="add_edit_btn_text">Guardar información</string>
+    <string name="cancel_edit_btn_text">Cancelar</string>
+
+    <string name="txt_incomplete_info">Es necesario rellenar todos los espacios.</string>
+    <string name="btn_try_again">Intentar de nuevo</string>
+    <string name="txt_save_success">Sus datos fueron guardados correctamente</string>
+    <string name="btn_save_success">Entendido</string>
+    <string name="txt_incorrect_bank">Al parecer, sus datos no son correctos.</string>
+    <string name="txt_save_bank">Su cuenta bancaria se agrego correctamente, en espera de evaluación.</string>
+
+    <string name="filter_view_http_one_canal">One Canal</string>
+    <string name="error_failure_none">Algo inesperado sucedió. Contacta a soporte.</string>
+    <string name="error_failure_network_connection_lost_suddenly">La conexión a internet se perdió repentinamente.</string>
+    <string name="error_failure_no_network_detected">No hay conexión a internet. Inténtalo de nuevo más tarde.</string>
+    <string name="error_failure_ssl">Error de SSL.</string>
+    <string name="error_failure_time_out">Se agotó el tiempo de espera con el servidor.</string>
+    <string name="error_general">Algo salió mal, por favor contacta a soporte.</string>
+    <string name="UnauthorizedOrForbidden">No autorizado</string>
+    <string name="server_error">Error interno del servidor</string>
+    <string name="label_loading">Cargando…</string>
+    <string name="digit_document_numer">Digite el número de documento</string>
+    <string name="select_document_type">Seleccione un tipo de documento</string>
+    <string name="activation_email_sent">Se ha enviado un mail para la activación de su cuenta</string>
+    <string name="digit_repeat_password">Por favor digite la misma contraseña nuevamente</string>
+    <string name="password_must_not_empty">Digite una contraseña</string>
+    <string name="password_must_be_the_same">Las contraseñas no coinciden, asegúrese de digitar la misma en ambos casilleros</string>
+    <string name="password_min_characters_error">Las contraseñas deben tener al menos 6 caracteres</string>
+    <string name="account_activation_successful">La operación se ha realizado con éxito, ya puede iniciar sesión</string>
+    <string name="forgot_password_email_sended">Se ha enviado un correo electrónico para cambiar la contraseña</string>
+    <string name="shouldSelectSalaryAdvanceReason">Seleccione un motivo</string>
+    <string name="thereWasAProblemRetrievingData">hubo un problema al recuperar la informacion</string>
+    <string name="inputExceedsTheMaximunAvailable">El monto ingresado no debe ser mayor al monto disponible de adelanto</string>
+    <string name="theEnteredValueIsIncorrect">El monto ingresado es incorrecto</string>
+    <string name="DigitSalaryAdvanceAmount">Digite el monto</string>
+    <string name="shouldSelectBankCard">Debe seleccionar una cuenta de depósito</string>
+    <string name="advance_amount_date">Monto de adelanto del %s</string>
+    <string name="wantToConfirSalaryAdvance">¿Desea confirmar su adelanto de sueldo?</string>
+    <string name="confirm">Confirmar</string>
+    <string name="amount_tranfered">Monto transferido del %s</string>
+
+    <string name="digitCurrentPassword" type="id">Digite la contraseña actual</string>
+    <string name="digitNewPassword" type="id">Digite la nueva contraseña</string>
+    <string name="repetNewPassword">Repita la nueva contraseña</string>
+    <string name="passwordUpdateSuccess">Su contraseña fue actualizada correctamente</string>
+    <string name="ruc">RUC</string>
+    <string name="wantToSignOut">¿Quieres cerrar sesión?</string>
+    <string name="digitSalaryAdvance">Ingrese salario de adelanto</string>
+    <string name="expiredSession">Sessión expirada, por favor vuelva a iniciar sesión</string>
+    <string name="close_x">X</string>
+    <string name="termsAndConditions">Términos y condiciones</string>
+
+    <string name="incompleteProfile">Aún debe completar datos de su perfil</string>
+    <string name="addBank">Agregar cuenta bancaria</string>
+    <string name="bankInRevision">Tu cuenta bancaria se encuentra en revisión</string>
+
+    <string name="go">Ir</string>
+    <string name="ok">ok</string>
+
+
+    <string name="select_marital_type">Seleccione un estado</string>
+    <string name="select_bank_type">Seleccione un banco</string>
+    <string name="required">Campo requerido</string>
+
+    <string name="accept_contract">Acepto el contrato de prestación de servicios</string>
+    <string name="valid_need_one_bank">Aún no cuenta con una cuenta bancaria activa</string>
+
+    <string name="title_verification">Verificación</string>
+</resources>

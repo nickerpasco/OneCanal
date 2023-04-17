@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background_rounded">
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen24"
+        android:layout_marginTop="@dimen/dimen21"
+        android:layout_marginEnd="@dimen/dimen24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/ic_info" />
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen7"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dimen8"
+        android:textAppearance="@style/hinter_regular"
+        app:layout_constraintEnd_toEndOf="@+id/iconIv"
+        app:layout_constraintStart_toStartOf="@+id/iconIv"
+        app:layout_constraintTop_toBottomOf="@+id/iconIv"
+        tools:text="@string/account_not_activated" />
+
+    <Button
+        android:id="@+id/okDlgBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:layout_marginBottom="@dimen/dimen24"
+        android:text="@string/understood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/messageTv"
+        app:layout_constraintStart_toStartOf="@+id/messageTv"
+        app:layout_constraintTop_toBottomOf="@id/messageTv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

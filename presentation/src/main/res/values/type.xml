@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TYPOGRAPHY SYSTEM-->
+    <style name="Title1" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/text32</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Title2" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/text28</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Title3" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text20</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Title4" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/inter_semi_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text18</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+
+
+    <style name="Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/text20</item>
+        <item name="android:letterSpacing">0.015</item>
+    </style>
+
+    <style name="Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/text18</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Subtitle3" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text16</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/text16</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="body1Bold" parent="body1">
+        <item name="android:textSize">@dimen/text17</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="body2">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/text14</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="body3">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text14</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+
+    <style name="overline">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text12</item>
+    </style>
+
+    <style name="overline2">
+        <item name="fontFamily">@font/inter_semi_bold</item>
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textSize">@dimen/text12</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="hinter_regular" parent="body1">
+        <item name="android:textColor">@color/hinter_color</item>
+    </style>
+
+    <style name="hinter_regular_small" parent="body2">
+        <item name="android:textColor">@color/input_text_hint_color</item>
+    </style>
+
+    <style name="footer_subtitle2" parent="Subtitle3">
+        <item name="android:textColor">@color/footer_subtitle</item>
+    </style>
+
+
+    <style name="EditTextFontStyle" parent="body3">
+        <item name="android:color">@color/text_input_color</item>
+
+    </style>
+
+
+</resources>

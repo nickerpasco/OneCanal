@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/statusTv"
+            style="@style/btn_small_solicited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:background="@drawable/bg_btn_solicited"
+            android:gravity="center"
+            android:text="@string/approved"
+            app:layout_constraintBottom_toBottomOf="@+id/PaymentPeriodTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/PaymentPeriodTv" />
+
+        <TextView
+            android:id="@+id/PaymentPeriodTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintStart_toStartOf="@+id/dateTv4"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv4"
+            tools:text="05-12-2021" />
+
+        <TextView
+            android:id="@+id/advanceReasonTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv5"
+            app:layout_constraintStart_toStartOf="@+id/dateTv5"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv5"
+            tools:text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Bibendum." />
+
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen7"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="@+id/BankAccountTv"
+            app:layout_constraintStart_toStartOf="@+id/totalComissionsTv"
+            app:layout_constraintTop_toBottomOf="@+id/BankAccountTv" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen7"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv4"
+            app:layout_constraintStart_toStartOf="@+id/totalComissionsTv"
+            app:layout_constraintTop_toBottomOf="@+id/PaymentPeriodTv" />
+
+        <TextView
+            android:id="@+id/BankAccountTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dateTv3"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv3"
+            tools:text="Interbank - 193-31349084-0-28" />
+
+        <TextView
+            android:id="@+id/dateTv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/acount_for_payment"
+            android:textAppearance="@style/body1"
+            app:layout_constraintEnd_toEndOf="@+id/divider9"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/realAmountToTransfetTv"
+            app:layout_constraintTop_toBottomOf="@+id/divider9" />
+
+        <TextView
+            android:id="@+id/dateTv4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/payment_period"
+            android:textAppearance="@style/body1"
+            app:layout_constraintEnd_toEndOf="@+id/divider10"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/BankAccountTv"
+            app:layout_constraintTop_toBottomOf="@+id/divider10" />
+
+        <TextView
+            android:id="@+id/dateTv5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/advance_reason_"
+            android:textAppearance="@style/body1"
+            app:layout_constraintEnd_toEndOf="@+id/divider11"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/PaymentPeriodTv"
+            app:layout_constraintTop_toBottomOf="@+id/divider11" />
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen7"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv2"
+            app:layout_constraintStart_toStartOf="@+id/totalComissionsTv"
+            app:layout_constraintTop_toBottomOf="@+id/realAmountToTransfetTv" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:textAppearance="@style/body1"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            tools:text="Monto transferido del 01-12-2021" />
+
+        <TextView
+            android:id="@+id/dateTv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16"
+            android:text="@string/amount_to_transfer"
+            android:textAppearance="@style/body1"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/divider8"
+            app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+        <TextView
+            android:id="@+id/AdvanceAmountTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dateTv"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv"
+            tools:text="S/1600.00" />
+
+
+        <TextView
+            android:id="@+id/realAmountToTransfetTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintEnd_toEndOf="@+id/dateTv2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dateTv2"
+            app:layout_constraintTop_toBottomOf="@+id/dateTv2"
+            tools:text="S/1600.00" />
+
+        <TextView
+            android:id="@+id/totalComissionsTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/hinter_regular"
+            android:textColor="@color/input_text_hint_color"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dateTv"
+            app:layout_constraintTop_toBottomOf="@+id/AdvanceAmountTv"
+            tools:text="@string/total_comissions" />
+
+        <Button
+            android:id="@+id/btn_ok_dlg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:layout_marginBottom="@dimen/dimen30"
+            android:text="@string/accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/advanceReasonTv"
+            app:layout_constraintStart_toStartOf="@+id/advanceReasonTv"
+            app:layout_constraintTop_toBottomOf="@+id/advanceReasonTv" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen28"
+            android:layout_marginEnd="@dimen/dimen28"
+            android:layout_marginTop="@dimen/dimen24"
+            android:gravity="center"
+            android:text="@string/salary_advance_detail"
+            android:textAppearance="@style/Title3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen7"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintStart_toStartOf="@+id/totalComissionsTv"
+            app:layout_constraintTop_toBottomOf="@+id/totalComissionsTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

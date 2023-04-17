@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.ui.features.salaryAdvance.success.view.SalaryAdvanceSuccessFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/feesTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/total_comissions"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintHorizontal_bias="0.46"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/salaryAdvanceAmountTv"
+                tools:text="Comisiones totales S/9.00 " />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:text="@string/amount_to_transfer"
+                android:gravity="center"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/feesTv" />
+
+            <TextView
+                android:id="@+id/amountToTransferTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/textView32"
+                tools:text="S/ 991.00" />
+
+            <TextView
+                android:id="@+id/SalaryAdvanceREasonTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:gravity="center"
+                android:text="@string/advance_reason"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/amountToTransferTv"
+                tools:text="Razón de adelanto: Lorem ipsum dolor sit amet" />
+
+            <TextView
+                android:id="@+id/headerTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/AdvanceRequestSuccesfullySend"
+                android:textAppearance="@style/Title3"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="“Se ha enviado la solicitud del adelanto de sueldo el 11-5-2021”" />
+
+            <TextView
+                android:id="@+id/paymentPeriodTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/textView26"
+                tools:text="12-05-2021" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen26"
+                android:gravity="center"
+                android:text="@string/payment_period"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/headerTv" />
+
+            <TextView
+                android:id="@+id/accountTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:gravity="center"
+                android:text="@string/destination_account"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/paymentPeriodTv"
+                tools:text="Cuenta de abono Interbank - \n193-31349084-0-28 " />
+
+            <TextView
+                android:id="@+id/salaryAdvanceAmountTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:gravity="center"
+                android:text="@string/advance_amount"
+                android:textAppearance="@style/body1"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/accountTv"
+                tools:text="Monto de adelanto S/1000.00" />
+
+            <TextView
+                android:id="@+id/go_back_to_home_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:padding="@dimen/dimen5"
+                android:text="@string/back_to_home"
+                android:textAppearance="@style/Title4"
+                android:textColor="@color/adversiment_color"
+                app:layout_constraintEnd_toStartOf="@+id/guideline19"
+                app:layout_constraintHorizontal_bias="0.453"
+                app:layout_constraintStart_toStartOf="@+id/guideline18"
+                app:layout_constraintTop_toBottomOf="@+id/SalaryAdvanceREasonTv" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dimen16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dimen16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

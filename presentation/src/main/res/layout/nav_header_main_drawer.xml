@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:id="@+id/drawerUserView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/btn_small_color_primary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dimen32"
+    android:paddingTop="@dimen/dimen32"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/dimen31">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/dimen52"
+        android:layout_height="@dimen/dimen52"
+        android:contentDescription="@string/nav_header_desc"
+        app:srcCompat="@drawable/ic_user_placeholder" />
+
+    <TextView
+        android:id="@+id/drawerUserNameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen28"
+        tools:text="Arianna Córdoba"
+        android:textAppearance="@style/Subtitle1"
+        android:textColor="@color/profile_user_name_color" />
+
+</LinearLayout>

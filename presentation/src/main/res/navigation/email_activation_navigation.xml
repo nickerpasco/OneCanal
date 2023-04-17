@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/email_activation_navigation"
+    app:startDestination="@id/splashActivity">
+
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="pe.com.onecanal.presentation.ui.features.splash.view.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+
+
+
+    <activity
+        android:id="@+id/newPasswordActivity"
+        android:name="pe.com.onecanal.presentation.ui.features.newPassword.view.NewPasswordActivity"
+        android:label="activity_new_password"
+        tools:layout="@layout/activity_new_password" >
+        <argument
+            android:name="email_validation_token"
+            app:argType="string"
+            android:defaultValue='""' />
+    </activity>
+</navigation>

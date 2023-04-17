@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="stepOneViewmodel"
+            type="pe.com.onecanal.presentation.ui.features.salaryAdvance.stepOne.viewModel.SalaryAdvanceStepOneViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".presentation.ui.features.salaryAdvance.stepOne.view.SalaryAdvanceStepOneFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/available_salary_sw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:switchMinWidth="@dimen/dimen150"
+                android:textOff=""
+                android:textOn=""
+                android:thumb="@drawable/switch_thumb"
+                android:thumbTextPadding="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:showText="false"
+                app:track="@drawable/switch_track" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salary"
+                android:textAppearance="@style/body1"
+                app:layout_constraintBottom_toBottomOf="@+id/available_salary_sw"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toTopOf="@+id/available_salary_sw" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salaryEtOt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/available_salary_sw"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/available_salary_sw">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/salaryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textAppearance="@style/body3"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/availableSalaryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen24"
+                android:textAppearance="@style/body1Bold"
+                app:layout_constraintEnd_toEndOf="@+id/salaryAdvanceAvailableTl"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/salaryAdvanceAvailableTl"
+                app:layout_constraintTop_toBottomOf="@+id/salaryEtOt"
+                tools:text="Salario disponible de adelanto : S/ 50" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salaryAdvanceAvailableTl"
+                setHint="@{stepOneViewmodel.availableSalaryAmountField.hint}"
+                android:layout_width="@dimen/dimen0"
+                android:layout_marginTop="@dimen/dimen16"
+                android:layout_height="wrap_content"
+                android:hint="@string/salary_advance_available"
+                app:layout_constraintEnd_toStartOf="@+id/guideline15"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toBottomOf="@+id/availableSalaryTv"
+                app:setError="@{stepOneViewmodel.availableSalaryAmountField.errorTextResource}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/salaryAdvanceAvailableEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="@={stepOneViewmodel.availableSalaryAmountField.fieldText}"
+                    android:textAppearance="@style/body3"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen24"
+                android:text="@string/commissions"
+                android:textAppearance="@style/body1"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toBottomOf="@+id/salaryAdvanceAvailableTl" />
+
+            <TextView
+                android:id="@+id/feeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen20"
+                android:layout_marginTop="@dimen/dimen10"
+                android:text="@string/fee"
+                android:textAppearance="@style/body2"
+                app:layout_constraintStart_toStartOf="@+id/guideline14"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/igvTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:text="@string/igv"
+                android:textAppearance="@style/body2"
+                app:layout_constraintStart_toStartOf="@+id/feeTv"
+                app:layout_constraintTop_toBottomOf="@+id/feeTv" />
+
+
+            <TextView
+                android:id="@+id/itftv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:text="@string/itf"
+                android:textAppearance="@style/body2"
+                app:layout_constraintStart_toStartOf="@+id/igvTv"
+                app:layout_constraintTop_toBottomOf="@+id/igvTv" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salaryAdvanceReasonTl"
+                style="@style/myDropDown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                android:hint="@string/select_advance_reason"
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/guideline15"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/salaryAdvanceAvailableTl"
+                app:layout_constraintTop_toBottomOf="@+id/itftv"
+                app:setError="@{stepOneViewmodel.advanceReasonField.errorTextResource}">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/salaryAdvanceReasonAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@={stepOneViewmodel.advanceReasonField.fieldText}"
+                    android:textAppearance="@style/Subtitle3"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_continue_stp_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen26"
+                android:layout_marginBottom="@dimen/dimen36"
+                android:text="@string/continue_"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/salaryAdvanceReasonTl"
+                app:layout_constraintStart_toStartOf="@+id/salaryAdvanceReasonTl"
+                app:layout_constraintTop_toBottomOf="@+id/salaryAdvanceReasonTl"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dimen16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dimen16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
+

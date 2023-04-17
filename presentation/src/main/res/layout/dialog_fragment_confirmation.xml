@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_background_rounded"
+    >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen28"
+        android:layout_marginTop="@dimen/dimen24"
+        android:layout_marginEnd="@dimen/dimen28"
+        android:src="@drawable/ic_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen7"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dimen8"
+        android:textAppearance="@style/hinter_regular"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="¿Desea confirmar su adelanto de sueldo?" />
+
+    <Button
+        android:id="@+id/btn_ok_dlg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen16"
+        android:text="@string/understood"
+        app:layout_constraintEnd_toEndOf="@+id/tv_message"
+        app:layout_constraintStart_toStartOf="@+id/tv_message"
+        app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsCb" />
+
+    <Button
+        android:id="@+id/btn_cancel_dlg"
+        style="@style/MyOutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen8"
+        android:text="@string/cancel"
+        android:layout_marginBottom="@dimen/dimen30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ok_dlg"
+        app:layout_constraintStart_toStartOf="@+id/btn_ok_dlg"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ok_dlg" />
+
+    <CheckBox
+        android:id="@+id/termsAndConditionsCb"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="@string/accept_terms_and_conditions"
+        app:layout_constraintEnd_toEndOf="@+id/tv_message"
+        app:layout_constraintStart_toStartOf="@+id/tv_message"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

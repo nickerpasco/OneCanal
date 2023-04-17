@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="stepThreeViewModel"
+            type="pe.com.onecanal.presentation.ui.features.salaryAdvance.stepThree.viewModel.SalaryAdvanceStepThreeViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.ui.features.salaryAdvance.stepThree.view.SalaryAdvanceStepThreeFragment"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/amountAdvanceDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/advance_amount_date"
+
+                android:textAppearance="@style/body1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/advanceAmountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/amountAdvanceDateTv"
+                tools:text="S/1000.00" />
+
+            <TextView
+                android:id="@+id/fees_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_comissions"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/advanceAmountTv"
+                tools:text="Comisiones totales S/9.00" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen17"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/fees_tv" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen12"
+                android:text="@string/amount_to_transfer"
+                android:textAppearance="@style/body1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/amountToTransferTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                tools:text="S/ 991.00" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen17"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/amountToTransferTv" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen17"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/paymentPeriodTv" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen17"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/accountTv" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen12"
+                android:text="@string/credit_account"
+                android:textAppearance="@style/body1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+                android:id="@+id/accountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:text="Interbank - 193-31349084-0-28 " />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen12"
+                android:text="@string/payment_period"
+                android:textAppearance="@style/body1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+            <TextView
+                android:id="@+id/paymentPeriodTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                tools:text="10-05-2021" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen12"
+                android:text="@string/motive_for_advance"
+
+                android:textAppearance="@style/body1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <TextView
+                android:id="@+id/advanceReasonTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/hinter_regular_small"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing
+                 elit. Bibendum." />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dimen16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dimen16" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ln_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen16"
+                android:layout_marginEnd="@dimen/dimen16"
+                android:layout_marginTop="@dimen/dimen8"
+                app:layout_constraintEnd_toEndOf="@+id/advanceReasonTv"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/advanceReasonTv"
+                app:layout_constraintTop_toBottomOf="@+id/advanceReasonTv">
+
+                <CheckBox
+                    android:id="@+id/checkBoxIn"
+                    android:layout_width="@dimen/dimen32"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/termsAndConditionsTv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/termsAndConditionsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept_money"
+                    android:textAppearance="@style/body3"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBoxIn"
+                    app:layout_constraintStart_toEndOf="@+id/checkBoxIn"
+                    app:layout_constraintTop_toTopOf="@+id/checkBoxIn" />
+
+                <Button
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_continue_stp_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen16"
+                android:layout_marginBottom="14dp"
+                android:text="@string/continue_"
+                app:layout_constraintBottom_toTopOf="@+id/btn_cancel_stp_three"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/ln_check"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintVertical_bias="0.992" />
+
+            <Button
+                android:id="@+id/btn_cancel_stp_three"
+                style="@style/MyOutlinedButton"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen36"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                app:layout_constraintStart_toStartOf="@+id/guideline16" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

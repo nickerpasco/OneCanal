@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="codeValidationViewModel"
+            type="pe.com.onecanal.presentation.ui.features.validateCode.viewmodel.CodeValidationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.ui.features.validateCode.view.CodeValidationActivity">
+
+        <include
+            android:id="@+id/appbar"
+            layout="@layout/action_bar_simple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/dimen16"
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+            android:text="@string/code_helper"
+            android:textAppearance="@style/body2"
+            android:textColor="@color/hinter_color_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen32"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/first"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/second"
+                android:padding="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/second"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/third"
+                android:padding="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/third"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="2"
+                android:nextFocusRight="@+id/fourth"
+                android:padding="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/fourth"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/btn_validate_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            android:layout_margin="@dimen/dimen16"
+            android:enabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/txt_cancel_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/txt_cancel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen13"
+            android:layout_marginBottom="@dimen/dimen16"
+            android:text="@string/cancel"
+            android:textAppearance="@style/footer_subtitle2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
