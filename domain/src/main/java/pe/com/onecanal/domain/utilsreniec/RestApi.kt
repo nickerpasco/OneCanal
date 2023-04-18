@@ -11,6 +11,6 @@ interface RestApi {
 
 
     @Headers("Content-Type: application/json")
-    @POST("Parametro/BuscarDNI")
-    fun getdataDNI(@Body reniecboby: reniecboby): Call<JsonObject>
+    @POST("api/v1/auth/getapiperuapp")
+    fun getdataDNI(@Body reniecboby: reniecboby): Call<ReponseDNI>
 }

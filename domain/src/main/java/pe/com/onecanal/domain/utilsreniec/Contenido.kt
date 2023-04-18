@@ -4,21 +4,22 @@ import com.google.gson.annotations.SerializedName
 
 data class Contenido (
 
-    @SerializedName("apPrimer") var apPrimer : String,
-    @SerializedName("apSegundo") var apSegundo : String,
-    @SerializedName("direccion") var direccion : String,
-    @SerializedName("estadoCivil") var estadoCivil : String,
-    @SerializedName("prenombres") var prenombres : String,
-    @SerializedName("nombrecompleto") var nombrecompleto : String,
-    @SerializedName("email") var email : String,
-    @SerializedName("fax") var fax : String,
-    @SerializedName("telefono") var telefono : String,
-    @SerializedName("celular") var celular : String,
-    @SerializedName("ubigeo") var ubigeo : String,
+    @SerializedName("numero") var numero : String,
+    @SerializedName("nombre_completo") var nombreCompleto : String,
+    @SerializedName("nombres") var nombres : String,
+    @SerializedName("apellido_paterno") var apellidoPaterno : String,
+    @SerializedName("apellido_materno") var apellidoMaterno : String,
+    @SerializedName("codigo_verificacion") var codigoVerificacion : Int,
+    @SerializedName("fecha_nacimiento") var fechaNacimiento : String,
     @SerializedName("sexo") var sexo : String,
-    @SerializedName("Exito") var Exito : Boolean,
-    @SerializedName("CodigoError") var CodigoError : String,
-    @SerializedName("MensajeProceso") var MensajeProceso : String,
-    @SerializedName("DatosAdicionales") var DatosAdicionales : String
+    @SerializedName("estado_civil") var estadoCivil : String,
+    @SerializedName("departamento") var departamento : String,
+    @SerializedName("provincia") var provincia : String,
+    @SerializedName("distrito") var distrito : String,
+    @SerializedName("direccion") var direccion : String,
+    @SerializedName("direccion_completa") var direccionCompleta : String,
+    @SerializedName("ubigeo_reniec") var ubigeoReniec : String,
+    @SerializedName("ubigeo_sunat") var ubigeoSunat : String,
+    @SerializedName("ubigeo") var ubigeo : List<String>
 
 )

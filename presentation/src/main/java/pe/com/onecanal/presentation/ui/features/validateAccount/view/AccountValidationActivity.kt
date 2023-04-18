@@ -1,21 +1,21 @@
 package pe.com.onecanal.presentation.ui.features.validateAccount.view
 
-import android.app.Dialog
+import android.app.AlertDialog
+import android.app.DatePickerDialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
-import android.util.Base64
+import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
+import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import pe.com.onecanal.BR
@@ -25,12 +25,13 @@ import pe.com.onecanal.domain.entity.DocumentType
 import pe.com.onecanal.domain.entity.Failure
 import pe.com.onecanal.domain.entity.ValidateData
 import pe.com.onecanal.domain.utilsreniec.Contenido
-import pe.com.onecanal.framework.hilt.utilsreniec.ReponseDNI
+import pe.com.onecanal.framework.hilt.modules.MessageDialojM
 import pe.com.onecanal.framework.hilt.utilsreniec.RestApiService
 import pe.com.onecanal.framework.hilt.utilsreniec.reniecboby
 import pe.com.onecanal.presentation.ui.base.BaseActivity
 import pe.com.onecanal.presentation.ui.dialogs.DocType
 import pe.com.onecanal.presentation.ui.dialogs.DocumentConfirmationDialog
+import pe.com.onecanal.presentation.ui.dialogs.MessageDialog
 import pe.com.onecanal.presentation.ui.dialogs.MessageDialogType
 import pe.com.onecanal.presentation.ui.extensions.startActivityE
 import pe.com.onecanal.presentation.ui.features.validateAccount.intent.AccountValidationIntent
@@ -39,6 +40,8 @@ import pe.com.onecanal.presentation.ui.features.validateAccount.intent.AccountVa
 import pe.com.onecanal.presentation.ui.features.validateAccount.viewmodel.AccountValidationViewModel
 import pe.com.onecanal.presentation.ui.features.validateCode.view.CodeValidationActivity
 import pe.com.onecanal.presentation.ui.util.dataBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 @AndroidEntryPoint
@@ -58,6 +61,46 @@ class AccountValidationActivity :
             getContract()
         }
         createsSpannableText()
+
+
+        iniciarCalendario();
+
+
+    }
+
+
+    private  fun iniciarCalendario(){
+
+
+        val txtfechanacimiento = binding.TxtFechaNacimiento;
+        val txtcontainer = binding.TxtFechaNacimiento;
+
+
+
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            // Crear un objeto Date a partir de los valores seleccionados
+            val selectedDate = Date(year-1900, monthOfYear, dayOfMonth)
+
+            // Formatear la fecha utilizando SimpleDateFormat
+            val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            val formattedDate = sdf.format(selectedDate)
+
+
+            txtfechanacimiento.setText(formattedDate)
+
+        }, year, month, day)
+
+
+
+        txtcontainer.setOnClickListener {
+            datePickerDialog.show()
+        }
+
     }
 
     private fun configureClickListeners() {
@@ -140,15 +183,34 @@ class AccountValidationActivity :
 
     fun getDataReniec() {
         val apiService = RestApiService()
-        val userInfo = reniecboby(  numeroDNI = "70223123")
 
+        val documentNumber = binding.documentNumberEt.text.toString()
+        val TxtFechaNacimiento = binding.TxtFechaNacimiento.text.toString()
+
+        val userInfo = reniecboby(  dni = documentNumber,birth_date = TxtFechaNacimiento)
+        showLoadingDialog()
         apiService.getDataReniec(userInfo) {
 
 
-            val jsonString = it.toString()
-            val gson = Gson()
-            val objeto = gson.fromJson(jsonString, ReponseDNI::class.java)
-            showCustomDialog(objeto.Contenido)
+            val objeto = it;
+            closeLoadingDialog()
+
+            if(objeto==null){
+                Toast.makeText(applicationContext, "No se encontró información", Toast.LENGTH_SHORT).show()
+            }else{
+
+                if(objeto.code==200){
+                    showCustomDialog(objeto.data.UserReniec,documentNumber)
+                }else if(objeto.code==403){
+
+                    var me = MessageDialojM()
+                    me.showMensajes(objeto.message,this)
+
+                }
+
+            }
+
+
             /*
 
             if (it?.exito == true) {
@@ -167,19 +229,43 @@ class AccountValidationActivity :
     }
 
 
-    fun showCustomDialog(data : Contenido ) {
-        val dialog = Dialog(this)
-        dialog.setContentView(R.layout.layout_reniec)
+    fun showCustomDialog(data : Contenido , dni:String ) {
+
+        val builder = AlertDialog.Builder(this)
+        val dialogView = layoutInflater.inflate(R.layout.layout_reniec, null)
+
+        builder.setView(dialogView)
+
+        val dialog = builder.create()
+        dialog.show()
+
+        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setGravity(Gravity.BOTTOM)
+
 
         val txtnombres = dialog.findViewById<EditText>(R.id.txtnombres)
         val txtdireccion = dialog.findViewById<EditText>(R.id.txtdireccion)
-        val txxapellidos = dialog.findViewById<EditText>(R.id.txxapellidos)
+        val txtfechanacimiento = dialog.findViewById<EditText>(R.id.txtfechanacimiento)
+        val txtSexo = dialog.findViewById<EditText>(R.id.txtSexo)
+        val TxtEstadoCivil = dialog.findViewById<EditText>(R.id.TxtEstadoCivil)
+        val txtubigeo = dialog.findViewById<EditText>(R.id.txtubigeo)
+
         val acceptButton = dialog.findViewById<Button>(R.id.read_btn)
         val btnsalir = dialog.findViewById<Button>(R.id.btnsalir)
+        val BtnCerrar = dialog.findViewById<ImageView>(R.id.BtnCerrar)
 
-        txtnombres.setText(data.prenombres)
+        txtnombres.setText(data.nombreCompleto)
         txtdireccion.setText(data.direccion)
-        txxapellidos.setText(data.apPrimer+" "+data.apSegundo)
+        txtfechanacimiento.setText(data.fechaNacimiento)
+        txtSexo.setText(data.sexo)
+        TxtEstadoCivil.setText(data.estadoCivil)
+        txtubigeo.setText(data.departamento + "-" + data.provincia + "-"+data.distrito + "")
+
+        txtfechanacimiento.setOnClickListener {
+
+
+        }
 
         acceptButton.setOnClickListener {
 
@@ -189,7 +275,7 @@ class AccountValidationActivity :
                 viewModel.userIntent.send(
                     AccountValidationIntent.AccountValidation(
                         selectedDocumentType,
-                        "70223123"
+                        dni
                     )
                 )
             }
@@ -199,10 +285,14 @@ class AccountValidationActivity :
         btnsalir.setOnClickListener {
 
             dialog.dismiss()
-
-
-
         }
+
+        BtnCerrar.setOnClickListener {
+
+            dialog.dismiss()
+        }
+
+
 
         dialog.show()
     }
@@ -210,10 +300,42 @@ class AccountValidationActivity :
 
 
 
+
+
     private fun validateAccount() {
         val documentNumber = binding.documentNumberEt.text.toString()
+        val TxtFechaNacimiento = binding.TxtFechaNacimiento.text.toString()
 
-        getDataReniec();
+        val tipodocumentoval = binding.documentTypeBtn
+        val fechanacimientoval = binding.fechacontainer
+        val nuerodocval = binding.otDocumentNumber
+
+
+        if(selectedDocumentType.length==0){
+            tipodocumentoval.error="Seleccione Tipo de Documento";
+            return;
+        }else{
+            tipodocumentoval.error = null
+        }
+
+        if(documentNumber.length==0){
+            nuerodocval.error="Ingrese Número de Documento";
+            return;
+        }else{
+            nuerodocval.error = null
+        }
+
+        if(TxtFechaNacimiento.length==0){
+            fechanacimientoval.error="Ingrese Fecha de nacimiento";
+            return;
+        }else{
+            fechanacimientoval.error = null
+        }
+
+        getDataReniec()
+
+
+
         /*
         lifecycleScope.launchWhenCreated {
             viewModel.userIntent.send(

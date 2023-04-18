@@ -47,7 +47,7 @@ android {
             target.buildConfigField "String", "${constantName}", "\"${constantValue}\""
         }
         dev{
-            buildConfigField "String", "BASE_URL", "\"https://onecanal.pappstest.com/api/\""
+            buildConfigField "String", "BASE_URL", "\"https://onecanal.rsdev.site/onecanal/api/\""
             buildConfigField "String", "DEEPLINK_BASE_URL", "\"https://onecanal.pappstest.com\""
             addConstantTo(owner, "DEEPLINK_HOST", "onecanal.pappstest.com")
         }

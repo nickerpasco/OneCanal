@@ -1,152 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
-
-<FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
 
-    <androidx.cardview.widget.CardView
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/congratulation_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="#FAFAFA"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="4dp"
-        android:layout_marginTop="30dp"
+        android:background="@drawable/dialog_bg"
+        android:orientation="vertical">
 
-        android:id="@+id/congratulation_card"
-        app:cardBackgroundColor="#FAFAFA"
-        app:cardElevation="0dp"
-        android:layout_gravity="bottom">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <TextView
+            android:id="@+id/TxtNameCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/dialog_bg"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Validar Usuario"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
 
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textSize="22dp"
-                android:layout_marginTop="20dp"
-                android:text="Validación de datos"
-                android:textAppearance="@style/Title2"
-                android:textColor="@color/title1_color"
-               />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/documentNumberTl"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombres"
-                android:layout_marginTop="10dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
-                app:layout_constraintStart_toStartOf="@+id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/documentTypeTl"
-              >
+                android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtnombres"
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/documentNumberTl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="true"
-                    android:textAppearance="@style/body3"
-                    tools:ignore="TextContrastCheck" />
+                    android:layout_marginTop="10dp"
+                    android:hint="Nombres"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtnombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                </com.google.android.material.textfield.TextInputLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Apellidos"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
-                app:layout_constraintStart_toStartOf="@+id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/documentTypeTl"
-                >
+                <com.google.android.material.textfield.TextInputLayout
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txxapellidos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="true"
-                    android:textAppearance="@style/body3"
-                    tools:ignore="TextContrastCheck" />
+                    android:hint="Fecha Nacimiento"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtfechanacimiento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
 
-            <com.google.android.material.textfield.TextInputLayout
+                </com.google.android.material.textfield.TextInputLayout>
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Dirección"
-                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
-                app:layout_constraintStart_toStartOf="@+id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/documentTypeTl"
-                >
+                <com.google.android.material.textfield.TextInputLayout
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtdireccion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="true"
-                    android:textAppearance="@style/body3"
-                    tools:ignore="TextContrastCheck" />
+                    android:hint="Sexo"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtSexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
 
-
-
-
-
-
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:orientation="horizontal"
-              android:layout_height="match_parent">
-
-              <Button
-                  android:id="@+id/read_btn"
-                  android:layout_width="0dp"
-                  android:textSize="13dp"
-                  android:layout_margin="10dp"
-                  android:layout_height="wrap_content"
-                  android:layout_weight="1"
-                  android:text="Aceptar" />
-
-              <Button
-                  android:id="@+id/btnsalir"
-                  android:layout_width="0dp"
-                  android:textSize="13dp"
-                  android:layout_margin="10dp"
-                  android:layout_height="wrap_content"
-                  android:layout_weight="1"
-                  android:text="Salir" />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Estado Civil"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/TxtEstadoCivil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-          </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <com.google.android.material.textfield.TextInputLayout
 
-    <ImageView
-        android:id="@+id/ImgBoton"
-        android:layout_width="269dp"
-        android:layout_height="66dp"
-        android:background="@drawable/img_logo_topbar"
-        android:padding="0dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ubigeo"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
 
-</FrameLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtubigeo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dirección"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtdireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="true"
+                        android:textAppearance="@style/body3"
+                        tools:ignore="TextContrastCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo Electrónico"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtcorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/body3"
+
+                        tools:ignore="TextContrastCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Teléfono"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                    app:layout_constraintTop_toBottomOf="@id/documentTypeTl">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txttelefno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/body3"
+
+                        tools:ignore="TextContrastCheck" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+        <TableLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:stretchColumns="0,1">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/read_btn"
+                    android:layout_width="0dp"
+                    android:textSize="13dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Aceptar" />
+
+                <Button
+                    android:id="@+id/btnsalir"
+                    android:layout_width="0dp"
+                    android:textSize="13dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Salir" />
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ImgBoton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|top"
+            android:padding="1dp"
+            android:src="@drawable/ic_user_placeholder" />
+
+
+        <ImageView
+            android:id="@+id/BtnCerrar"
+            android:layout_width="57dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="25dp"
+            android:padding="15dp"
+
+            android:src="@drawable/ic_cancel"
+            android:tint="@color/black" />
+
+    </FrameLayout>
 </LinearLayout>

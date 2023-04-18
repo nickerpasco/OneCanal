@@ -114,6 +114,36 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/fechacontainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen14"
+                android:hint="@string/fechanacimiento"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/ot_document_number"
+                app:setError="@{accountValidationViewModel.accountValidationFormFields.documentNumber.errorTextResource}">
+
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:maxLength="12"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:id="@+id/TxtFechaNacimiento"
+                    android:textAppearance="@style/body3"
+                    tools:ignore="TextContrastCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
                 android:id="@+id/btn_validate_account"
                 android:layout_width="0dp"
@@ -174,7 +204,7 @@
                 android:layout_marginStart="@dimen/dimen21"
                 app:layout_constraintEnd_toStartOf="@+id/guideline_end"
                 app:layout_constraintStart_toStartOf="@+id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@+id/ot_document_number">
+                app:layout_constraintTop_toBottomOf="@+id/fechacontainer">
 
                 <CheckBox
                     android:id="@+id/checkBoxIn"

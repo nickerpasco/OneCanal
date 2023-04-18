@@ -16,4 +16,6 @@ dependencies {
     implementation "com.google.code.gson:gson:$versions.gson"
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpInterceptor"
 
+    implementation 'org.json:json:20210307'
+
 }

@@ -179,4 +179,5 @@
     <string name="valid_need_one_bank">Aún no cuenta con una cuenta bancaria activa</string>
 
     <string name="title_verification">Verificación</string>
+    <string name="fechanacimiento">Fecha de Nacimiento</string>
 </resources>
