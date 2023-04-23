@@ -105,6 +105,7 @@ dependencies {
 
     //HILT
     implementation daggerHilt.hilt
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     kapt daggerHilt.compiler
     annotationProcessor daggerHilt.annotationProcessor
 //    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'

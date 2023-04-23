@@ -545,6 +545,133 @@
                         app:srcCompat="@drawable/ic_address"
                         tools:ignore="ContentDescription" />
 
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen25"
+                        android:layout_marginTop="@dimen/dimen6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView57"
+                        app:srcCompat="@drawable/ic_address"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/textocardtarjet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen35"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:text="@string/namelabelcard"
+                        android:textAppearance="@style/overline2"
+                        android:textColor="@color/profile_body_color"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+
+                    <LinearLayout
+
+                        android:id="@+id/Linear1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="@dimen/dimen35"
+
+                        android:textAppearance="@style/body1"
+                        android:textColor="@color/profile_body_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageview7"
+                        app:layout_constraintTop_toBottomOf="@+id/textocardtarjet"
+
+                        tools:ignore="MissingConstraints">
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtnumerocuenta"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:textAppearance="@style/body1"
+                                    android:textColor="@color/profile_body_color"
+                                    tools:text="" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ic_buscar"
+                                android:layout_width="50.0dip"
+                                android:layout_height="40.0dip"
+                                android:background="@drawable/btn_date"
+                                android:gravity="center">
+
+                                <ImageView
+
+                                    android:id="@+id/ImgAccionBusqueda"
+                                    android:layout_width="20.0dip"
+                                    android:layout_height="20.0dip"
+                                    android:background="@drawable/ic_baseline_add_24"
+                                    android:tint="@color/white"
+                                    android:tintMode="@color/white"
+                                    android:backgroundTint="@color/white"
+                                    android:foregroundTint="@color/white"
+
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                    <View
+                        android:id="@+id/divider9"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dimen12"
+                        android:background="@color/divider_color"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/Linear1"
+                        app:layout_constraintTop_toBottomOf="@+id/Linear1" />
+
+
+                    <ImageView
+                        android:id="@+id/imageview7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen25"
+                        android:layout_marginTop="@dimen/dimen6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textocardtarjet"
+                        app:srcCompat="@drawable/ic_credit_card"
+                        tools:ignore="ContentDescription" />
+
+
                     <Button
                         android:id="@+id/editBtn"
                         android:layout_width="0dp"
@@ -555,7 +682,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/divider8"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+                        app:layout_constraintTop_toBottomOf="@+id/divider9" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

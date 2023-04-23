@@ -92,6 +92,8 @@
     <string name="marital_status">Estado civil</string>
     <string name="address">Dirección</string>
 
+    <string name="namelabelcard">Número de Cuenta</string>
+
 
     <string name="add_bank">Agregar cuenta bancaria</string>
     <string name="bank_helper">Ingrese sus datos. Esta sección es obligatoria.</string>

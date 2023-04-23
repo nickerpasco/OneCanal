@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneCanal">
+        <activity android:name=".presentation.ui.features.cuentaddactivitis.CuentasbancariasActivity"></activity>
         <activity
             android:name=".presentation.ui.features.validateCode.view.CodeValidationActivity"
             android:exported="false"
@@ -49,7 +50,8 @@
             </intent-filter>
 
             <!-- DEEP LINK -->
-            <!--<intent-filter>
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -59,7 +61,8 @@
                     android:host="${DEEPLINK_HOST}"
                     android:pathPrefix="/reset-password"
                     android:scheme="https" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
             <!-- DEEP LINK -->
 
         </activity>

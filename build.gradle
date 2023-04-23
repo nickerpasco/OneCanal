@@ -60,7 +60,7 @@ buildscript {
                 annotationProcessor   : "androidx.hilt:hilt-compiler:$versions.hiltAnotationProcesor",
                 hiltLifecycleViewmodel: "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltLifecycleViewmodel",
         ]
-
+        kotlin_version = '1.5.31'
 
 
     }

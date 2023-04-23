@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_editFragment_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_editFragment_to_bankFragment3"
+            app:destination="@id/bankFragment" />
     </fragment>
 
 

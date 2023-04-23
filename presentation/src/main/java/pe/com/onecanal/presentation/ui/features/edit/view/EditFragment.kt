@@ -1,7 +1,9 @@
 package pe.com.onecanal.presentation.ui.features.edit.view
 
+import android.content.Intent
 import android.view.View
 import android.widget.AdapterView
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -11,17 +13,23 @@ import kotlinx.coroutines.launch
 import pe.com.onecanal.BR
 import pe.com.onecanal.R
 import pe.com.onecanal.databinding.FragmentEditBinding
+import pe.com.onecanal.databinding.FragmentProfileBinding
 import pe.com.onecanal.domain.entity.Failure
 import pe.com.onecanal.domain.entity.MaritalStatus
 import pe.com.onecanal.domain.entity.UserProfileData
 import pe.com.onecanal.presentation.ui.base.BaseFragmentWithViewModel
 import pe.com.onecanal.presentation.ui.bindingTools.AutoCompleteTextView.bindAdapter
 import pe.com.onecanal.presentation.ui.dialogs.MessageDialogType
+import pe.com.onecanal.presentation.ui.features.cuentaddactivitis.CuentasbancariasActivity
 import pe.com.onecanal.presentation.ui.features.edit.intent.EditIntent
 import pe.com.onecanal.presentation.ui.features.edit.intent.EditIntentConfig
 import pe.com.onecanal.presentation.ui.features.edit.viewModel.EditViewModel
 import pe.com.onecanal.presentation.ui.features.mainDrawer.view.MainDrawerActivity
 import pe.com.onecanal.presentation.ui.features.profile.adapter.BankLinearLayoutAdapter
+import pe.com.onecanal.presentation.ui.features.profile.intent.ProfileIntent
+import pe.com.onecanal.presentation.ui.features.profile.intent.ProfileIntentConfig
+import pe.com.onecanal.presentation.ui.features.profile.view.ProfileFragmentDirections
+import pe.com.onecanal.presentation.ui.features.profile.viewmodel.ProfileViewModel
 import pe.com.onecanal.presentation.ui.features.splash.intent.SplashIntent
 
 @AndroidEntryPoint
@@ -29,15 +37,35 @@ class EditFragment :
     BaseFragmentWithViewModel<FragmentEditBinding, EditViewModel>(),
     View.OnClickListener, EditIntentConfig.IntentCallback {
 
-    var selectedType : Int? = null
+
+    var selectedType: Int? = null
     private lateinit var userToken: String
 //    private val marital : MutableMap<String, Int?> = mutableMapOf()
 
+
+    var position = 0
+
     override fun onCreateView(view: View) {
         super.onCreateView(view)
+
+
         binding.apply {
             appbar.tvTitle.text = getString(R.string.edit_profile)
             appbar.btnBack.setOnClickListener { goBack() }
+
+            btnaddback.setOnClickListener{
+//                Toast.makeText(context, "Hello, Kotlin!", Toast.LENGTH_SHORT).show()
+
+
+                findNavController().navigate(EditFragmentDirections.actionEditFragmentToBankFragment3())
+
+               // val navController = Navigation.findNavController(requireView())
+                //val intent = Intent(activity, CuentasbancariasActivity::class.java)
+                //startActivity(intent)
+
+
+            }
+
             btnCancel.setOnClickListener {
                 goBack()
             }
