@@ -347,7 +347,7 @@ class AccountValidationActivity :
             documentNumber = dni,
             birthDate = data.fechaNacimiento,
             names = data.nombres,
-            surnames = data.apellidoPaterno+ " "+data.apellidoPaterno,
+            surnames = data.apellidoPaterno+ " "+data.apellidoMaterno,
             email = correoingresado,
             province = data.provincia,
             city = data.distrito,
