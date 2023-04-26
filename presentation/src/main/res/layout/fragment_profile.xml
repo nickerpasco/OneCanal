@@ -617,26 +617,6 @@
 
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:id="@+id/ic_buscar"
-                                android:layout_width="50.0dip"
-                                android:layout_height="40.0dip"
-                                android:background="@drawable/btn_date"
-                                android:gravity="center">
-
-                                <ImageView
-
-                                    android:id="@+id/ImgAccionBusqueda"
-                                    android:layout_width="20.0dip"
-                                    android:layout_height="20.0dip"
-                                    android:background="@drawable/ic_baseline_add_24"
-                                    android:tint="@color/white"
-                                    android:tintMode="@color/white"
-                                    android:backgroundTint="@color/white"
-                                    android:foregroundTint="@color/white"
-
-                                    />
-                            </LinearLayout>
 
                         </LinearLayout>
 

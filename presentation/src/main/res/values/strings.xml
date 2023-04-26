@@ -15,7 +15,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="salary_advance">Adelanto de sueldo</string>
     <string name="salary">Salario</string>
-    <string name="salary_advance_available">Salario disponible de adelanto :\nS/ %s</string>
+    <string name="salary_advance_available">Salario disponible de adelanto hoy :\nS/ %s</string>
+    <string name="salary_advance_available_title">Salario disponible de adelanto hoy :</string>
+    <string name="salaryspace">  \nS/ %s</string>
+
+
 
     <string name="commissions">Comisiones</string>
     <string name="continue_">Continuar</string>

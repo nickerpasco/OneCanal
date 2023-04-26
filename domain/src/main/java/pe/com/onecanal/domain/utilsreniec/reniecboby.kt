@@ -7,4 +7,5 @@ data class reniecboby(
 
     @SerializedName("dni") val dni: String?,
     @SerializedName("birth_date") val birth_date: String?,
+    @SerializedName("document_type") val document_type: String?,
 )

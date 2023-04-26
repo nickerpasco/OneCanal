@@ -201,7 +201,7 @@ class AccountValidationActivity :
         val documentNumber = binding.documentNumberEt.text.toString()
         val TxtFechaNacimiento = binding.TxtFechaNacimiento.text.toString()
 
-        val userInfo = reniecboby(dni = documentNumber, birth_date = TxtFechaNacimiento)
+        val userInfo = reniecboby(dni = documentNumber, birth_date = TxtFechaNacimiento,document_type=selectedDocumentType)
         showLoadingDialog()
         apiService.getDataReniec(userInfo) {
 
@@ -216,7 +216,7 @@ class AccountValidationActivity :
 
                 if (objeto.code == 200) {
                     showCustomDialog(objeto.data.UserReniec, documentNumber)
-                } else if (objeto.code == 403) {
+                } else{
 
                     var me = MessageDialojM()
                     me.showMensajes(objeto.message, this)
@@ -371,11 +371,7 @@ class AccountValidationActivity :
                         .show()
 
                     lifecycleScope.launchWhenCreated {
-                        viewModel.userIntent.send(
-                            AccountValidationIntent.AccountValidation(
-                                selectedDocumentType,
-                                dni
-                            )
+                        var cap = viewModel.userIntent.send(AccountValidationIntent.AccountValidation(selectedDocumentType,dni)
                         )
                     }
 

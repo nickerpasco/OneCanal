@@ -71,8 +71,10 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+
             <TextView
-                android:id="@+id/availableSalaryTv"
+                android:id="@+id/labeltvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen24"
@@ -81,7 +83,21 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/salaryAdvanceAvailableTl"
                 app:layout_constraintTop_toBottomOf="@+id/salaryEtOt"
-                tools:text="Salario disponible de adelanto : S/ 50" />
+                tools:text="Salario disponible de adelanto hoy: " />
+
+            <TextView
+                android:id="@+id/availableSalaryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textAppearance="@style/body1Bold"
+                android:textSize="38dp"
+                app:layout_constraintEnd_toEndOf="@+id/salaryAdvanceAvailableTl"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/salaryAdvanceAvailableTl"
+                app:layout_constraintTop_toBottomOf="@+id/labeltvTitle"
+                tools:text="S/ 50" />
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/salaryAdvanceAvailableTl"

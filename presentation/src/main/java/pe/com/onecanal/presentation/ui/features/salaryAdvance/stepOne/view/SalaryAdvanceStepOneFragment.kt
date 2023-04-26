@@ -232,8 +232,11 @@ class SalaryAdvanceStepOneFragment : BaseFragmentWithViewModel<FragmentSalaryAdv
         closeLoadingDialog()
         this.userSalary = salary
         binding.salaryEtOt.editText?.setText(salary.salary.showAsCurrency())
+
+        binding.labeltvTitle.text = getString(R.string.salary_advance_available_title)
+
         binding.availableSalaryTv.text = getString(
-            R.string.salary_advance_available,
+            R.string.salaryspace,
             salary.salaryAdvanceAvailable.toTwoDecimalStr()
         )
         viewModel.apply {
