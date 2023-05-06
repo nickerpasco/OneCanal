@@ -16,8 +16,8 @@ android {
         applicationId "pe.com.onecanal"
         minSdk 21
         targetSdk 32
-        versionCode 9
-        versionName "1.2.5"
+        versionCode 12
+        versionName "2.0.3"
 
         testInstrumentationRunner "androidx.test.runner.And roidJUnitRunner"
     }
@@ -47,7 +47,7 @@ android {
             target.buildConfigField "String", "${constantName}", "\"${constantValue}\""
         }
         dev{
-            buildConfigField "String", "BASE_URL", "\"https://onecanal.rsdev.site/onecanal/api/\""
+            buildConfigField "String", "BASE_URL", "\"http://159.89.54.195/onecanalapi/api/\""
             buildConfigField "String", "DEEPLINK_BASE_URL", "\"https://onecanal.pappstest.com\""
             addConstantTo(owner, "DEEPLINK_HOST", "onecanal.pappstest.com")
         }

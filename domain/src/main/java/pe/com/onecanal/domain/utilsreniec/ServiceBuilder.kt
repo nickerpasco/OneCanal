@@ -25,7 +25,7 @@ object ServiceBuilder {
         .build()
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("https://onecanal.rsdev.site/onecanal/") // change this IP for testing by your actual machine IP
+        .baseUrl("http://159.89.54.195/onecanalapi/") // change this IP for testing by your actual machine IP
         .addConverterFactory(GsonConverterFactory.create())
         .client(httpClient)
         .client(client)
